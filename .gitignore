@@ -1,0 +1,12 @@
+/target/
+**/target/
+/.local/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.log
+__pycache__/
+*.py[cod]

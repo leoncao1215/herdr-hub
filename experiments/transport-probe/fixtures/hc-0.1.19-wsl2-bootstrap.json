@@ -1,0 +1,29 @@
+{
+  "hc_version": "hc 0.1.19",
+  "platform": "Linux under WSL2",
+  "connector_behavior": "record argv, never execute bootstrap, exit 255",
+  "cases": [
+    {
+      "remote_session": null,
+      "connector_arguments": [
+        "sh -c 'p=$(command -v herdr-core) || p=$HOME/.local/bin/herdr-core; [ -x \"$p\" ] || { echo \"herdr-core is not installed here\" >&2; exit 127; }; exec \"$p\" connect'"
+      ],
+      "expected_error": "unreachable"
+    },
+    {
+      "remote_session": "hub-probe",
+      "connector_arguments": [
+        "sh -c 'p=$(command -v herdr-core) || p=$HOME/.local/bin/herdr-core; [ -x \"$p\" ] || { echo \"herdr-core is not installed here\" >&2; exit 127; }; HC_SESSION=hub-probe exec \"$p\" connect'"
+      ],
+      "expected_error": "unreachable"
+    },
+    {
+      "remote_session": "hub.probe-1",
+      "connector_arguments": [
+        "sh -c 'p=$(command -v herdr-core) || p=$HOME/.local/bin/herdr-core; [ -x \"$p\" ] || { echo \"herdr-core is not installed here\" >&2; exit 127; }; HC_SESSION=hub.probe-1 exec \"$p\" connect'"
+      ],
+      "expected_error": "unreachable"
+    }
+  ],
+  "cleanup": "isolated Linux core stopped; scratch state removed"
+}
