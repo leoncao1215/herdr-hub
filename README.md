@@ -6,8 +6,9 @@
 计划中的行为：GitHub 单管理员登录、设备手动审批、中继先可用，
 可直连时自动切换 P2P，两条路径均端到端加密。两端首版采用 CLI，TUI 后续增加。
 
-**G1 本机可行性阶段已通过，当前不是可部署产品。** 仓库包含需求、阶段计划、
-方案、本机传输实验和真实 WSL2 hc bootstrap 样本；尚未实现管理网站、设备控制面或 hc 连接适配器。
+**G1 可行性和 G2 本地 hc 接入已通过，当前不是完整可部署产品。**
+仓库包含需求、阶段计划、传输实验、真实 WSL2 bootstrap 样本和原生 hc 桥接组件，
+已完成 Windows/Linux 验证及双 reviewer 验收；尚无管理网站、设备控制面或完整网络连接 agent。
 
 - [需求与验收标准](docs/requirements-and-acceptance.md)
 - [持久化工作计划](docs/work-plan.md)
@@ -15,6 +16,8 @@
 - [hc bootstrap 实测与接入边界](docs/hc-bootstrap.md)
 - [WSL2 网络专项分析](docs/wsl-networking.md)
 - [G1 阶段验收记录](docs/acceptance/g1.md)
+- [G2 本地桥接组件](docs/g2-core-bridge.md)
+- [G2 阶段验收记录](docs/acceptance/g2.md)
 
 ## 本机实验
 
